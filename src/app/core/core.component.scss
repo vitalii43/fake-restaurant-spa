@@ -1,0 +1,16 @@
+
+.page-content{
+    margin-left: 5em;   
+}
+.page__food-menu{
+    position:fixed;
+    top: 3.6em;
+    z-index: 1;
+}
+
+@media screen and (max-width:720px){
+    .page-content{
+        margin-left:0em; 
+        margin-top:8em;  
+    }
+}

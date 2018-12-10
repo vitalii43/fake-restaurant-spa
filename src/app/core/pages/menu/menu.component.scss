@@ -1,0 +1,11 @@
+:host{
+    margin-top: 5em;
+    display:block;
+}
+.meals-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.meal-item{
+    padding: 1em;
+}

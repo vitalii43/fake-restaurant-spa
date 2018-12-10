@@ -1,0 +1,17 @@
+@media screen and (max-width: 720px){
+    .categories{
+        display:flex;
+        width: 100vw;
+        overflow: auto;
+    }
+    :host{
+        height: auto;
+        width:auto;
+        &:hover{
+            width:auto;            
+        }
+    }
+    .category-title{
+        display: block;
+    }
+}
