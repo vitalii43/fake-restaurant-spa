@@ -7,7 +7,7 @@
             <div class="mask rgba-black-strong waves-light flex-center white-text" mdbWavesEffect>
                 <div class="slider-content">
                   <p class="h1 slider-content__header">
-                    Welcom to our restourant
+                    Welcome to our restourant
                   </p>  
                   <button type="button" mdbBtn color="primary" mdbWavesEffect [routerLink]="['/home']" >book a table</button>
                 </div>            
@@ -51,87 +51,61 @@
 </mdb-carousel>
 <!--/.Carousel Wrapper-->
 
-<section class="section row">
-    <div class="section__content col-lg-6 col-md-12">
-        <p class="h2">About us</p>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error repellendus ea earum odio ratione non explicabo, omnis ex enim vero accusamus, consectetur molestias hic adipisci eum nihil aliquid quos cum!</p>
+<section class="section-about row">
+    <div class="section-about__content col-lg-6 col-md-12">
+        <p class="h2 about-header">About us</p>
+        <p class="p-about-us">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error repellendus ea earum odio ratione non explicabo, omnis ex enim vero accusamus, consectetur molestias hic adipisci eum nihil aliquid quos cum!</p>
+        <p class="p-about-us">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error repellendus ea earum odio ratione non explicabo, omnis ex enim vero accusamus, consectetur molestias hic adipisci eum nihil aliquid quos cum!</p>
     </div>
     <div class=" col-lg-6 col-md-12">
         <img class="section__img" src="/assets/images/home/cook.jpg" alt="">
     </div>
+    
 </section>
 
-<div class="row">
-    <div class="col-md-12">
-  
-      <div id="mdb-lightbox-ui"></div>
-  
-      <div class="mdb-lightbox no-margin galery-wrap">
-  
-        <figure class="col-md-4">
-          <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(117).jpg" data-size="1600x1067">
-            <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(117).jpg"
-              class="img-fluid">
-          </a>
-        </figure>
-  
-        <figure class="col-md-4">
-          <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(98).jpg" data-size="1600x1067">
-            <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(98).jpg"
-              class="img-fluid" />
-          </a>
-        </figure>
-  
-        <figure class="col-md-4">
-          <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(131).jpg" data-size="1600x1067">
-            <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(131).jpg"
-              class="img-fluid" />
-          </a>
-        </figure>
-  
-        <figure class="col-md-4">
-          <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(123).jpg" data-size="1600x1067">
-            <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(123).jpg"
-              class="img-fluid" />
-          </a>
-        </figure>
-  
-        <figure class="col-md-4">
-          <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(118).jpg" data-size="1600x1067">
-            <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(118).jpg"
-              class="img-fluid" />
-          </a>
-        </figure>
-  
-        <figure class="col-md-4">
-          <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(128).jpg" data-size="1600x1067">
-            <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(128).jpg"
-              class="img-fluid" />
-          </a>
-        </figure>
-  
-        <figure class="col-md-4">
-          <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(132).jpg" data-size="1600x1067">
-            <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(132).jpg"
-              class="img-fluid" />
-          </a>
-        </figure>
-  
-        <figure class="col-md-4">
-          <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(115).jpg" data-size="1600x1067">
-            <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(115).jpg"
-              class="img-fluid" />
-          </a>
-        </figure>
-  
-        <figure class="col-md-4">
-          <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(133).jpg" data-size="1600x1067">
-            <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(133).jpg"
-              class="img-fluid" />
-          </a>
-        </figure>
-  
-      </div>
-  
+<div class="contact-wrap">
+  <h2 class="contact-header">Contact</h2>
+  <section class="contact row">
+    <div class="contact-column col-lg-6 col-md-12 ">
+        <div class="contact-form">
+            <form action="" method="post" class="contact-form">
+              
+              <div class="md-form">
+                  <i class="fa fa-user prefix"></i>
+                  <input mdbInputDirective type="text" id="contact-name" class="form-control">
+                  <label for="contact-name" class="">name</label>
+              </div>
+
+              <div class="md-form">
+                  <i class="fa fa-envelope prefix"></i>
+                  <input mdbInputDirective type="email" id="contact-email" class="form-control">
+                  <label for="contact-email" class="">E-mail</label>
+              </div>
+ 
+              <!--<textarea placeholder="Message" name="message" id="" cols="30" rows="10" class="contact-textarea"></textarea>-->
+                       
+              <div class="md-form">
+                  <i class="fa fa-pencil prefix"></i>
+                  <textarea type="text" id="contact-textarea"
+                  class="md-textarea form-control" mdbInputDirective></textarea>
+                  
+                  <label for="contact-textarea">Message</label>
+              </div>
+             
+              <button class="contact-send" type="button" mdbBtn color="primary" mdbWavesEffect >Send</button>
+            </form>
+          </div>
     </div>
-  </div>
+    <div class="contact-column col-lg-6 col-md-12 ">
+      <div class="map">
+          <img src="./assets/images/Map.png" alt="map" class="map-img">
+      </div>      
+    </div>
+</section>
+
+
+</div>
+
+
+
+

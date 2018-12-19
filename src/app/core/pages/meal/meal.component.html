@@ -1,0 +1,22 @@
+<div *ngIf="dish | async as dish">
+  
+  <mdb-breadcrumb class="bread-crumbs">
+    <mdb-breadcrumb-item class="blue-text" [routerLink]="['/menu']" >Menu</mdb-breadcrumb-item>
+    <mdb-breadcrumb-item class="blue-text" [routerLink]="['/menu', routInfo.category]" >{{routInfo.category}}</mdb-breadcrumb-item>
+    <mdb-breadcrumb-item class="active" [routerLink]="['/menu', routInfo.category, routInfo.dishId]">{{dish.name}}</mdb-breadcrumb-item>
+  </mdb-breadcrumb>
+
+  <div  class="content">
+    <div class="content__img-container">
+        <app-image-loader [imgSrc]="dish.imageUrl" ></app-image-loader>
+    </div>
+    <div class="content-body">
+      <h1 class="h1" >{{dish.name}}</h1> 
+      <p class="h5" >{{dish.weight}} г</p> 
+      <p>{{dish.description}}</p> 
+      <p>{{dish.price}} грн <button type="button" class="btn btn-primary">Замовити</button></p>      
+    </div>
+
+  </div>
+
+</div>

@@ -9,6 +9,8 @@ import { AngularFireModule} from 'angularfire2';
 import { AngularFireDatabaseModule, } from 'angularfire2/database';
 import { AngularFirestoreModule } from 'angularfire2/firestore'
 import { environment } from 'src/environments/environment';
+import { AngularFireAuth, AngularFireAuthModule } from 'angularfire2/auth';
+
 
 @NgModule({
   declarations: [
@@ -21,10 +23,13 @@ import { environment } from 'src/environments/environment';
     MDBBootstrapModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularFireAuthModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
-  providers: [],
+  providers: [
+   
+  ],
   bootstrap: [AppComponent]
 })
 

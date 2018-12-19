@@ -1,0 +1,17 @@
+<div class="page">
+  <div class="contact-wrap">
+    <div class="contact-form">
+      <form action="" method="post" class="contact-form">
+        <input placeholder="Full Name" type="text" class="contact-input" name="name">
+        <input placeholder="E mail" type="email" class="contact-input" name="email">
+        <textarea placeholder="Message" name="message" id="" cols="30" rows="10" class="contact-textarea"></textarea>
+        <input type="submit" class="common-green-btn" value=Send>
+      </form>
+    </div>
+    <div class="contact-map">
+      <agm-map [latitude]="latitude" [longitude]="longitude" style="height: 300px" (mapClick)="placeMarker($event)">
+        <agm-marker *ngFor="let marker of markers" [latitude]="marker.latitude" [longitude]="marker.longitude"></agm-marker>
+      </agm-map>
+    </div>
+  </div>
+</div>

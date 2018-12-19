@@ -1,0 +1,31 @@
+:host{
+    position: fixed;
+    display:block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.83);
+    z-index: 99;
+}
+.modal-wrap{
+    display:flex;
+    justify-content: center;
+    
+    height: 100%;  
+    margin-top: 3.5em;  
+}
+.booking-modal{
+    align-self: center;
+    background: white;
+    .fa-times{
+        color:black;
+        cursor: pointer;
+        &:hover{
+            color: gray;
+        }
+    }
+}
+.table-number{
+    margin:0;
+}

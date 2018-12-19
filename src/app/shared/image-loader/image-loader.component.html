@@ -1,0 +1,9 @@
+<div class="img-container">
+    <img src="{{imgSrc}}" 
+        (load)="onLoad()"
+        (error)="getPlaceholderImg($event)"
+         class="img-fluid" alt="#" >                
+    <div *ngIf="loading" class="loader-wrap">
+        <div  class="loader"></div>
+    </div> 
+</div>

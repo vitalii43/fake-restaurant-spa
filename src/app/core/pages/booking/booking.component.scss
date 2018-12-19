@@ -1,0 +1,142 @@
+$table-color: #e2e2e2;
+
+.page-container{
+    padding: 1em;
+}
+.tables-wrap{
+    max-width: 100%;
+    overflow: auto;   
+}
+.reservation-wrap{
+    padding-left: 8em;
+}
+.tables{
+    width: 938px;
+    max-width: 938px;
+    position: relative;
+}
+.tables> .table{
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    background: $table-color;
+    border-radius: 50%;
+    margin:0;
+    cursor: pointer;
+}
+.table-n-0{
+    top: 255px;
+    left: 430px;
+}
+.table-n-1 {
+    top: 320px;
+    left: 382px;
+}
+.table-n-2 {
+    top: 322px;
+    left: 529px;
+}
+.table-n-3 {
+    top: 360px;
+    left: 450px;
+}
+.table-n-4 {
+    top: 385px;
+    left: 364px;
+}
+.table-n-5 {
+    top: 448px;
+    left: 323px;
+}
+.table-n-6 {
+    top: 437px;
+    left: 438px;
+}
+.table-n-7 {
+    top: 412px;
+    left: 520px;
+}
+.table-n-8 {
+    top: 538px;
+    left: 346px;
+}
+.table-n-9 {
+    top: 538px;
+    left: 445px;
+}
+.table-n-10 {
+    top: 538px;
+    left: 613px;
+}
+.table-n-11 {
+    top: 538px;
+    left: 713px;
+}
+.table-n-12 {
+    top: 642px;
+    left: 284px;
+}
+.table-n-13 {
+    top: 642px;
+    left: 400px;
+}
+.table-n-14 {
+    top: 642px;
+    left: 511px;
+}
+.table-n-15 {
+    top: 642px;
+    left: 622px;
+}
+.table-n-16 {
+    top: 642px;
+    left: 738px;
+}
+.date-select__input{
+    width: 10em
+}
+input[type=date]::-webkit-calendar-picker-indicator {
+    background: #fff url('/assets/images/calendar-tool.svg')  97% 50% no-repeat ;
+    opacity: 1;
+    color: transparent;
+    background-size: contain;
+  }
+  input {
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 3px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+    width: 190px;
+  }
+  
+.closedModal{
+    display: none;
+}
+.reserved{
+    background: red;
+}
+.not-reserved{
+    background: green;
+}
+.reserved,
+.not-reserved{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.reserved-img-avatar{
+    width:100%;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 720px){
+    .reservation-wrap{
+        padding-left: 0em;
+    }
+}
+@media screen and (max-width: 992px) and(min-width:720px){
+    .reservation-wrap{
+        padding-left: 2em;
+    }
+}

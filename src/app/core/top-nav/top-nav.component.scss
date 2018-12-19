@@ -7,3 +7,18 @@
         color: white;
     }
 }
+.log-out, 
+.log-in{
+    color: white;
+}
+.avatar{
+    padding: 0 .5em;
+}
+.avatar-icon{
+    width: 35px;
+    border-radius: 50%;
+}
+.log-out{
+    display: flex;
+    align-items: baseline;
+}

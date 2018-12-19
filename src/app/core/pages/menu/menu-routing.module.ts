@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { MenuComponent } from './menu.component';
 import { CoreComponent } from '../../core.component';
+import { MealComponent } from '../meal/meal.component';
 
 const routes: Routes = [
   {
@@ -10,15 +11,18 @@ const routes: Routes = [
     component: CoreComponent,
     children: [
       {
-        path: '',
-        redirectTo: 'pizza',
-        pathMatch: 'full',
-        
-      },
+        path:':category/:mealId',
+        component: MealComponent
+      },  
       {
         path: ':category',
         component: MenuComponent
-      }
+      },
+      {
+        path: '',
+        redirectTo: 'pizza',
+        pathMatch: 'full'        
+      }   
     ]
   }
 ];

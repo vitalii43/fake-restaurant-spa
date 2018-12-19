@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { CoreComponent } from './core.component';
 import { MenuComponent } from './pages/menu/menu.component';
+import { BookingComponent } from './pages/booking/booking.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 const coreRoutes: Routes = [
     {
@@ -21,6 +23,14 @@ const coreRoutes: Routes = [
             {
                 path: 'menu',
                 component: MenuComponent
+            },
+            {
+                path: 'reservation',
+                component: BookingComponent
+            },
+            {
+                path: 'contact',
+                component: ContactComponent
             }
         ]
     }

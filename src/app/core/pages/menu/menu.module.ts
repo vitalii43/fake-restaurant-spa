@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { MenuRoutingModule } from './menu-routing.module';
 import { MenuComponent } from './menu.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -11,8 +12,10 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
   imports: [
     CommonModule,
     MenuRoutingModule,
-    MDBBootstrapModule
+    MDBBootstrapModule,
+    SharedModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
+  exports: [MenuComponent]
 })
 export class MenuModule { }

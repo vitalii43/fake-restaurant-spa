@@ -1,28 +1,36 @@
 <div class="meals-container">
-    <div class="meal-item" *ngFor="let meal of meals ">
-            <mdb-card>
-                    <!--Card image-->
-                    <mdb-card-img [src]="meal.img" alt="Card image cap"></mdb-card-img>
-                    <!--Card content-->
-                    <mdb-card-body>
-                  
-                      <!--Title-->
-                      <mdb-card-title>
-                        <h4>{{meal.name}}</h4>
-                        <h6>{{meal.weight}}</h6>
-                      </mdb-card-title>
-                  
-                      <!--Text-->
-                      <mdb-card-text>{{meal.description}}
-                      </mdb-card-text>
-                      <p class="h5 price">
-                          {{meal.price}} grn
-                      </p>
-                      <a href="#" mdbBtn color="primary" mdbWavesEffect>Order</a>
-                    </mdb-card-body>
-                  </mdb-card>
-    </div>
+    <div class="meal-item" *ngFor="let meal of meals | async">
+      <div class="card">
 
+        <!--Card image-->
+        <div class="view overlay hm-white-slight card-img" >
+            
+            <app-image-loader [imgSrc]="meal.imageUrl" [routerLink]="['./',meal.id ]"></app-image-loader>
+        </div>
+        
+         
+        <!--/.Card image-->
+    
+        <!--Card content-->
+        <div class="card-block">
+            <!--Title-->
+            <h2 class="card-title">{{meal.name}}</h2>
+            <p class="weight">{{meal.weight}} г</p>
+            <!--Text-->
+            <div class="card-description">
+                <p class="description">{{meal.description}}</p>
+            </div>
+            <p class="h5 price">{{meal.price}} grn</p>
+            <div>
+              <a  class="btn btn-primary order-btn">Замовити</a>
+            </div>
+            
+        </div>
+        <!--/.Card content-->
+    
+      </div>
+    </div>
+    
 </div>
 
 <nav aria-label="Page navigation example">

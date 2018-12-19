@@ -1,4 +1,4 @@
-export interface MealItem{
+export interface DishItem{
     imageUrl: string,
     name: string,
     weight: number,

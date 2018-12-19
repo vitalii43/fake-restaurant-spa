@@ -4,5 +4,17 @@
         height: 23em;
         object-fit: cover
     }
-    
+    .row{
+        margin: 0;
+    }
+    .contact{
+        padding-top: 0;
+    }
+    .contact-form{
+        padding-bottom: 1em;
+    }
+    .section-about,
+    .contact{
+       padding: .8em; 
+    }
 }

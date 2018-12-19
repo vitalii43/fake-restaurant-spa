@@ -1,0 +1,13 @@
+@media screen and (max-width: 992px) and (min-width: 720px){
+    .meals-container{
+        grid-template-columns: auto auto;
+    }
+}
+@media screen and (max-width: 720px){
+    .meals-container{
+        grid-template-columns: auto;
+    }
+    .meal-item{
+        padding: 1em ;
+    }
+}

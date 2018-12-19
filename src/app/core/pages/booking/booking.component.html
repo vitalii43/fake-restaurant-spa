@@ -1,0 +1,35 @@
+<div class="page-container">
+  <h1>Booking</h1>
+  
+  <div class="reservation-wrap">
+    <div class="date-select">
+        <label for="dateSelect">Вибрати дату</label>
+        <input id="dateSelect" type="date" class="date-select__input" [min]="minDate" [(ngModel)]="dateToBook" (change)="dateChange()">
+    </div> 
+      
+      <div class="tables-wrap">
+        <div class="tables">
+          <img class="tables__img" src="/assets/images/booking/tables.jpg" alt="Схема ресторану">
+                
+          <div *ngFor="let table of reservedTables; let index=index" [ngClass]="['table-n-' + index]" class="table" (click)="openBookingModal(index)">
+            <div *ngIf="table" class="reserved">
+              <img *ngIf="table.user.uid == user?.uid || user?.uid == auth.admin.uid" [src]="table.user?.photoURL" class="reserved-img-avatar">
+            </div>
+            <div *ngIf="!table" class="not-reserved"></div>
+          </div>
+
+        </div>
+          
+      </div>
+  </div>    
+</div>
+
+<app-booking-modal 
+[class.closedModal]="!modalOpened" 
+(hideComponent)="closeModal()"
+[tableNumber]='modalTableNumber'
+[editTableMod]="editTableMod"
+[bookedTableDetails]="bookedTableDetails"
+[dateToBook] = "dateToBook"
+[modalAdminMod] = "modalAdminMod">
+</app-booking-modal>

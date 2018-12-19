@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
-import { DatabaseService } from '../../shared/database.service';
+import { DatabaseService } from '../../../shared/database.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-menu',
@@ -9,8 +10,8 @@ import { DatabaseService } from '../../shared/database.service';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-
-  meals=[
+  meals:Observable<any[]>;
+  /*meals:any = [
     {
       img : '/assets/images/pepperoni.jpeg',
       name: 'pizza',
@@ -285,40 +286,23 @@ export class MenuComponent implements OnInit {
     
        
   ]
-  menuDemo:any;
+  */
+  menuDemo:Observable<any[]>;
   constructor(private route: ActivatedRoute,
               private firebase: DatabaseService) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe(params=>{
       console.log(params.get('category'))
+      const category = params.get('category')
+      this.meals = this.firebase.getCategory(category)
+      this.firebase.getCategory(category).subscribe(res=>{
+        console.log('firestore colection', res)
+      })
+      
     })
-    this.firebase.items.subscribe( data =>{
-      console.log(data)
-    })
+    
   }
-
+  
 }
 
-/*addItem(name: string) {
-    // Persist a document id
-    const id = this.afs.createId();
-    const item: Item = { id, name };
-    this.itemsCollection.doc(id).set(item);
-  }
-  
-  
-  export class AppComponent {
-  private itemDoc: AngularFirestoreDocument<Item>;
-  item: Observable<Item>;
-  constructor(private afs: AngularFirestore) {
-    this.itemDoc = afs.doc<Item>('items/1');
-    this.item = this.itemDoc.valueChanges();
-  }
-  update(item: Item) {
-    this.itemDoc.update(item);
-  }
-}
-  
-  
-  */
