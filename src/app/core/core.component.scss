@@ -6,12 +6,13 @@
 }
 .page__food-menu{
     position:fixed;
-    top: 3.6em;
-    z-index: 1;
+    top: 4.3em;
+    z-index: 130;
 }
 .footer{
     transform: translate(100vh,0)
 }
+
 @media screen and (max-width:720px){
     .page-content{
         margin-left:0em; 

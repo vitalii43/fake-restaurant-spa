@@ -1,5 +1,9 @@
 $table-color: #e2e2e2;
 
+.booking-title{
+    padding: .7em 0 0 1em;
+    font-family: 'Open Sans', sans-serif;
+}
 .page-container{
     padding: 1em;
 }
@@ -9,6 +13,7 @@ $table-color: #e2e2e2;
 }
 .reservation-wrap{
     padding-left: 8em;
+    padding-top: 2.2em;
 }
 .tables{
     width: 938px;
@@ -114,10 +119,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
     display: none;
 }
 .reserved{
-    background: red;
+    background: #e73a3a;;
 }
 .not-reserved{
-    background: green;
+    background: rgb(50, 131, 50);
 }
 .reserved,
 .not-reserved{
@@ -128,6 +133,14 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .reserved-img-avatar{
     width:100%;
     border-radius: 50%;
+}
+.date-select{
+    padding-bottom: 0.8em;
+}
+.date-select-label{
+    padding-right: .7em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
 }
 
 @media screen and (max-width: 720px){

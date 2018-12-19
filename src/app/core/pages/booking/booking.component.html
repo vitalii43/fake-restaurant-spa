@@ -1,9 +1,9 @@
 <div class="page-container">
-  <h1>Booking</h1>
+  <h1 class="booking-title">Reservation</h1>
   
   <div class="reservation-wrap">
     <div class="date-select">
-        <label for="dateSelect">Вибрати дату</label>
+        <label for="dateSelect" class="date-select-label">Вибрати дату: </label>
         <input id="dateSelect" type="date" class="date-select__input" [min]="minDate" [(ngModel)]="dateToBook" (change)="dateChange()">
     </div> 
       

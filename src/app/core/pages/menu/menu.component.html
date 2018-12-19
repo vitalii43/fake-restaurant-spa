@@ -1,5 +1,21 @@
+<div class="sorting-wrap" *ngIf="meals">
+  <div class="sorting">
+    <span class="sorting-header">Сортування: </span>
+    <select class="select-sorting browser-default custom-select" (change)="sortMenu($event)">
+        <option value=""></option>
+        
+        <option value="price-up">За зростанням ціни</option>
+        <option value="price-down">За спаданням ціни</option>
+        <option value="weight-up">За збільшенням розміру</option>
+        <option value="weight-down">За зменшенням розміру</option>
+        
+    </select>
+  </div>
+    
+</div>
+
 <div class="meals-container">
-    <div class="meal-item" *ngFor="let meal of meals | async">
+    <div class="meal-item" *ngFor="let meal of meals">
       <div class="card">
 
         <!--Card image-->
@@ -33,7 +49,7 @@
     
 </div>
 
-<nav aria-label="Page navigation example">
+<nav *ngIf="meals" aria-label="Page navigation example">
   <ul class="pagination pg-blue">
     <li class="page-item disabled">
       <a class="page-link" tabindex="-1" mdbWavesEffect>Previous</a>

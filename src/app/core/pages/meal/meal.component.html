@@ -1,4 +1,4 @@
-<div *ngIf="dish | async as dish">
+<div class="dish-container" *ngIf="dish | async as dish">
   
   <mdb-breadcrumb class="bread-crumbs">
     <mdb-breadcrumb-item class="blue-text" [routerLink]="['/menu']" >Menu</mdb-breadcrumb-item>
@@ -11,10 +11,14 @@
         <app-image-loader [imgSrc]="dish.imageUrl" ></app-image-loader>
     </div>
     <div class="content-body">
-      <h1 class="h1" >{{dish.name}}</h1> 
-      <p class="h5" >{{dish.weight}} г</p> 
-      <p>{{dish.description}}</p> 
-      <p>{{dish.price}} грн <button type="button" class="btn btn-primary">Замовити</button></p>      
+      <h1 class="dish-title" >{{dish.name}}</h1> 
+      <p class="dish-weight" >{{dish.weight}} г</p> 
+      <p class="dish-description">{{dish.description}}</p> 
+      <div class="order-dish">
+        <span class="dish-price">{{dish.price}} грн</span>
+        <button type="button" class="btn btn-primary">Замовити</button>
+      </div>
+            
     </div>
 
   </div>

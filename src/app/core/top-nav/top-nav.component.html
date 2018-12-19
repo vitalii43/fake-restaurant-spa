@@ -14,11 +14,8 @@
           <li [routerLinkActive]="['active']" class="nav-item waves-light" mdbWavesEffect>
               <a class="nav-link" [routerLink]="['/reservation']">Reservation</a>
           </li>
-          <li [routerLinkActive]="['active']" class="nav-item waves-light" mdbWavesEffect>
-              <a class="nav-link" [routerLink]="['/contact']">Contact us</a>
-          </li>
       </ul>
-      <ul class="navbar-nav nav-flex-icons" >
+      <ul class="navbar-nav nav-flex-icons navbar-text" >
         
         <div *ngIf="user else login" class="log-out" >
           <span>{{user.displayName}}</span>

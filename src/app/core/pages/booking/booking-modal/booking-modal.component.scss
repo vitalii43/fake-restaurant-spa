@@ -16,6 +16,8 @@
     margin-top: 3.5em;  
 }
 .booking-modal{
+    min-width: 20em;
+    min-height: 10em;
     align-self: center;
     background: white;
     .fa-times{
@@ -25,7 +27,24 @@
             color: gray;
         }
     }
+    .modal-form{
+        padding-top: 1em !important;
+    }
+    .edit-details{
+        padding: 0 1em;
+        .title-detail{
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.2em;
+            font-weight: 400;
+        }
+    }
 }
 .table-number{
     margin:0;
+}
+.edit-btns{
+    display: flex;
+    .save-edited{
+        margin-right: .8em;
+    }
 }

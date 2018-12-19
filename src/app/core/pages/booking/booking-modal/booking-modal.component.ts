@@ -78,5 +78,6 @@ export class BookingModalComponent implements OnInit, OnChanges {
   deleteBooking(){
     this.booking.deleteTableBooking(this.bookedTableDetails, this.bookedTableDetails.id)
     console.log('bookedTableDetails',this.bookedTableDetails)
+    this.close()
   }
 }

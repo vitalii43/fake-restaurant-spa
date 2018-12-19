@@ -5,15 +5,15 @@
       <p class="table-number">Table {{tableNumber}}</p>
       <i class="fas fa-times" (click)="close()"></i>
     </div>
-    <div *ngIf="editTableMod">
-      <div>телефон: {{bookedTableDetails.phoneNumber}}</div>
-      <div>час: {{bookedTableDetails.timeBook}}</div>      
+    <div *ngIf="editTableMod" class="edit-details">
+      <div> <span class="title-detail">телефон: </span>{{bookedTableDetails.phoneNumber}}</div>
+      <div> <span class="title-detail">час: </span> {{bookedTableDetails.timeBook}}</div>      
     </div>
-    <form *ngIf="!modalAdminMod" [formGroup]="modalForm" (ngSubmit)="modalSubmit(modalForm.value)" class="text-center border border-light p-5">
+    <form *ngIf="!modalAdminMod" [formGroup]="modalForm" (ngSubmit)="modalSubmit(modalForm.value)" class="modal-form text-center border border-light p-5">
       <p *ngIf="!editTableMod" class="h4 mb-4">Book a table</p>
       <p *ngIf="editTableMod" class="h4 mb-4">Edit reservation</p>
       <div class="field">
-        <input formControlName="phoneNumber" type="text"  class="form-control mb-4" placeholder="number">
+        <input formControlName="phoneNumber" type="text"  class="form-control mb-4" placeholder="phone number">
         <div class="error-message" *ngIf="!modalForm.controls['phoneNumber'].valid && modalForm.controls['phoneNumber'].touched">not valid</div>
       </div>    
       <div class="field">
@@ -21,8 +21,12 @@
         <div class="error-message" *ngIf="!modalForm.controls['timeBook'].valid && modalForm.controls['timeBook'].touched">not valid</div>
       </div>  
       <button *ngIf="!editTableMod" [disabled]="!modalForm.valid" class="btn btn-info btn-block" type="submit">Send</button>
-      <button *ngIf="editTableMod" [disabled]="!modalForm.valid" class="btn btn-info btn-block" type="submit">Save</button>
-      <button *ngIf="editTableMod"  class="btn btn-info btn-block" (click)="deleteBooking()" type="button">delete</button>
+      
+      <div *ngIf="editTableMod" class="edit-btns" >
+        <button  [disabled]="!modalForm.valid" class="btn btn-info btn-block save-edited" type="submit">Save</button>
+        <button  class="btn btn-danger btn-block" (click)="deleteBooking()" type="button">delete</button>
+      </div>
+
     </form>
   </div>
 </div>

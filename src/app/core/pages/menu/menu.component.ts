@@ -10,299 +10,33 @@ import { Observable } from 'rxjs';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-  meals:Observable<any[]>;
-  /*meals:any = [
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-    {
-      img : '/assets/images/pepperoni.jpeg',
-      name: 'pizza',
-      weight: '420g',
-      description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ',
-      price: 123
-    },
-    
-       
-  ]
-  */
+  mealsObservable:Observable<any[]>;
+  meals: any[];
+
   menuDemo:Observable<any[]>;
   constructor(private route: ActivatedRoute,
               private firebase: DatabaseService) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe(params=>{
-      console.log(params.get('category'))
       const category = params.get('category')
-      this.meals = this.firebase.getCategory(category)
-      this.firebase.getCategory(category).subscribe(res=>{
-        console.log('firestore colection', res)
-      })
-      
+      this.firebase.getCategory(category).subscribe(meals=>{
+        this.meals = meals;
+        console.log(this.meals)
+      })    
     })
-    
+    //this.mealsObservable.
   }
-  
+  sortMenu(event){
+    console.log(event)
+    const sortType = event.target.value;
+
+    this.meals = this.meals.sort((a,b)=>{
+      if(sortType == 'price-up') return a.price - b.price;
+      if(sortType == 'price-down') return b.price - a.price;
+      if(sortType == 'weight-up') return a.weight - b.weight;
+      if(sortType == 'weight-down') return b.weight - a.weight;
+    })
+  }
 }
 

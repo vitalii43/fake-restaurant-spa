@@ -1,7 +1,7 @@
 .meals-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 1em;
+    padding:  0 1em 1em 1em;
 }
 
 .card{
@@ -71,6 +71,24 @@
         font-size: 2em;
         padding: .3em 0;
         font-weight: 300;
+    }
+}
+
+.sorting-wrap{
+    display:flex;
+    justify-content: end;
+    padding: 2em 2em 0 2em;
+    justify-content: flex-end;
+    .sorting{
+        display:flex;
+        align-items: baseline;
+        .select-sorting{
+            width: 13em;            
+        }
+        .sorting-header{
+            padding: 0 1em 0 0;
+            font-family: 'Roboto', sans-serif;
+        }
     }
 }
 
