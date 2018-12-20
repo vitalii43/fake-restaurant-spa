@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ElementRef, HostListener } from '@angular/core';
 import { AuthService } from 'src/app/shared/auth.service';
 import { Observable } from 'rxjs';
 import { User } from 'firebase';
@@ -10,12 +10,14 @@ import { User } from 'firebase';
 })
 export class TopNavComponent implements OnInit {
   user:User;
-  constructor(private auth: AuthService) {  }
   openedNavMob: boolean = false;
+
+  constructor(private auth: AuthService, private eRef: ElementRef) {  }
+  
+ 
   ngOnInit() {
     this.auth.user.subscribe(user => {
       this.user = user;
-      console.log(user)
     })
   }
 
@@ -24,9 +26,9 @@ export class TopNavComponent implements OnInit {
   }
   logIn(){
     this.auth.googleLogin()
-    setTimeout(()=>{ console.log(this.auth.user)},5000)
   }
   logOut(){
     this.auth.logout();
   }
 }
+
